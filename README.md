@@ -1,10 +1,9 @@
-
-# Displaying Has Many Through Rails
+# Displaying Has Many Through In Rails
 
 ## Objectives
 
 1. Construct a bi-directional has_many through.
-2. Query for associations via the belongs\_to, has\_many, and has\_many through associations.
+2. Query for associations via the belongs_to, has_many, and has_many through associations.
 3. Iterate over associations in a view and display associated data for a primary instance.
 4. Identify the join model in a has_many through.
 
@@ -16,11 +15,11 @@ We've seen how we can use simple associations to display data to our users in Ra
 
 ### has_many, through
 
-Let's say you're making a blog and want to give users the ability to sign up and comment on your posts. What's the relationship between a post and a comment?  If you said, "A comment belongs to a post, and a post has many comments," give yourself a pat on the back!
+Let's say you're making a blog and want to give users the ability to sign up and comment on your posts. What's the relationship between a post and a comment? If you said, "A comment belongs to a post, and a post has many comments," give yourself a pat on the back!
 
 What about the relationship between a user and a comment? Again, a user has many comments, and a comment belongs to the user. So far, this is pretty straightforward.
 
-Things get slightly more complicated when we talk about the relationship between a user and the posts that the user has commented on. How would you describe that relationship? Well, a user obviously can comment on many posts, and a post has comments from many users. Yep, this is a many to many relationship. We can set up a many-to-many relationship using a join table. In this case, `comments` will act as our join table. Any table that contains two foreign keys can be thought of as a join table.  A row in our `comments` table will look something like this:
+Things get slightly more complicated when we talk about the relationship between a user and the posts that the user has commented on. How would you describe that relationship? Well, a user obviously can comment on many posts, and a post has comments from many users. Yep, this is a many to many relationship. We can set up a many-to-many relationship using a join table. In this case, `comments` will act as our join table. Any table that contains two foreign keys can be thought of as a join table. A row in our `comments` table will look something like this:
 
 <table border="1" cellpadding="4" cellspacing="0">
   <tr>
